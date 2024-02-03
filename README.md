@@ -1,3 +1,17 @@
+Notes by $t@$h:
+Ok so before Rustyvisor can be built, need to grab rust-x86_REPAIRED from my repos. That had to be refactored extensively.
+Copy that entire directory into the hypervisor directory of this repo
+
+Then can built by running the build.sh. Has to be on linux obviously. But using cargo build theoretically may be
+able to build this with repo on Windows so long as kvm.h is statisfied, so under WSL. Haven't tried it though
+
+It's a shame Rustyvisor was prepared the way it was so it is destined to be broken down the road. Ideally, the
+build environment and code would be at least maintained in a container and forever locked to a version of Rust
+or written to use stable. Other than that critical flaw, the code is actually lovely. The world needs as many of
+these baremetal hypervisors available as possible. I will see how long I can maintain it. For now its useful to me
+
+Original README below:
+
 # RustyVisor  [![build_status](https://travis-ci.com/iankronquist/rustyvisor.svg?branch=master)](https://travis-ci.com/iankronquist/rustyvisor)
 
 A hypervisor written in Rust.
